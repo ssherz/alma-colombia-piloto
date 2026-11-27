@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alma Colombia · Viajes con Propósito 60+</title>
+<meta name="description" content="Viajes boutique en Colombia para adultos activos de 60 a 75 años. Grupos exclusivos de máximo 12 personas, especialistas locales y acompañamiento integral.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2732%27 fill=%27%231B3B2F%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-size=%2734%27 text-anchor=%27middle%27 fill=%27%23C69749%27 font-family=%27Georgia%27%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FAF7F2; --cream2:#F3EDE3; --forest:#1B3B2F; --forest2:#24503F;
+  --terra:#B85D3B; --terra-d:#9C4A2C; --gold:#C69749; --ink:#1F1F1D; --muted:#55524C;
+  --line:#E4DCCD; --white:#fff;
+  --serif:"Cormorant Garamond","Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:"Plus Jakarta Sans","Inter","Noto Sans JP",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --r:18px; --shadow:0 18px 50px -24px rgba(27,59,47,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{font-family:var(--sans);font-size:18px;line-height:1.7;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+html[lang="ja"] body{font-family:"Noto Sans JP",var(--sans);line-height:1.85}
+html[lang="ja"] h1,html[lang="ja"] h2,html[lang="ja"] h3{font-family:"Noto Sans JP",var(--sans);font-weight:700;letter-spacing:0}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;color:var(--forest)}
+h2{font-size:clamp(2.1rem,4vw,3.2rem);margin-bottom:18px}
+h3{font-size:1.6rem}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:14px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:720px}
+section{padding:110px 0}
+.center{text-align:center}.center .lead{margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 1rem/1.2 var(--sans);padding:16px 30px;border-radius:999px;border:2px solid transparent;cursor:pointer;text-decoration:none;transition:.25s;min-height:56px;text-align:center}
+.btn-primary{background:var(--terra);color:#fff}.btn-primary:hover{background:var(--terra-d);transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(255,255,255,.85);color:#fff;background:rgba(255,255,255,.06)}.btn-ghost:hover{background:#fff;color:var(--forest)}
+.btn-outline{border-color:var(--forest);color:var(--forest);background:transparent}.btn-outline:hover{background:var(--forest);color:#fff}
+.btn:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s;background:linear-gradient(to bottom,rgba(15,30,24,.6),rgba(15,30,24,0))}
+header.solid{background:rgba(250,247,242,.97);box-shadow:0 6px 30px -18px rgba(0,0,0,.3);backdrop-filter:blur(8px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px;gap:20px}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:#fff;line-height:1.1}
+.brand b{font-family:var(--serif);font-size:1.6rem;letter-spacing:.14em;font-weight:700;white-space:nowrap}
+.brand small{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;opacity:.9;margin-top:3px}
+header.solid .brand,header.solid .menu a{color:var(--forest)}
+.menu{display:flex;gap:26px;list-style:none}
+.menu a{color:#fff;text-decoration:none;font-weight:500;font-size:.95rem;padding:6px 0;border-bottom:2px solid transparent;white-space:nowrap}
+.menu a:hover{border-color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:14px}
+.lang{display:flex;border:1.5px solid rgba(255,255,255,.6);border-radius:999px;overflow:hidden}
+header.solid .lang{border-color:var(--line)}
+.lang button{background:none;border:0;color:#fff;font:600 .85rem var(--sans);padding:9px 13px;cursor:pointer;min-height:40px;white-space:nowrap}
+header.solid .lang button{color:var(--forest)}
+.lang button.on{background:var(--gold);color:#1F1F1D!important}
+.nav .btn{padding:12px 22px;min-height:46px;font-size:.92rem;white-space:nowrap}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.8rem;cursor:pointer;width:44px;height:44px}
+header.solid .burger{color:var(--forest)}
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;color:#fff;background:#1b2a22 url(img/hero.jpg) center 40%/cover no-repeat;padding:150px 0 0}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,28,22,.84) 0%,rgba(14,28,22,.58) 45%,rgba(14,28,22,.1) 75%),linear-gradient(to top,rgba(14,28,22,.85) 0%,rgba(14,28,22,0) 40%)}
+.hero .wrap{position:relative;width:100%}
+.hero-copy{max-width:690px;padding-bottom:44px}
+.hero h1{color:#fff;font-size:clamp(2.4rem,4.8vw,4.1rem);margin-bottom:24px;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.hero h1 em{font-style:italic;color:#F0CF92}
+.hero p.sub{font-size:1.2rem;max-width:600px;margin-bottom:34px;color:#F5F0E8}
+.hero-btns{display:flex;flex-wrap:wrap;gap:16px}
+.scarcity-pill{display:inline-flex;align-items:center;gap:10px;background:rgba(198,151,73,.2);border:1px solid rgba(240,207,146,.6);color:#FBE9C6;padding:8px 16px;border-radius:999px;font-size:.9rem;font-weight:600;margin-bottom:22px}
+.dot{flex:0 0 9px;width:9px;height:9px;border-radius:50%;background:#F0CF92;box-shadow:0 0 0 0 rgba(240,207,146,.7);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(240,207,146,0)}100%{box-shadow:0 0 0 0 rgba(240,207,146,0)}}
+.trust{position:relative;background:rgba(250,247,242,.97);color:var(--forest);border-radius:var(--r) var(--r) 0 0;display:grid;grid-template-columns:repeat(4,1fr)}
+.trust div{padding:24px 22px;display:flex;gap:14px;align-items:center;font-weight:600;font-size:.98rem;line-height:1.35;border-right:1px solid var(--line)}
+.trust div:last-child{border-right:0}
+.trust svg{flex:0 0 34px;color:var(--terra)}
+.compare{display:grid;grid-template-columns:1fr 1.25fr;gap:28px;margin-top:56px;align-items:stretch}
+.col{border-radius:var(--r);padding:42px}
+.col.bad{background:var(--cream2);border:1px solid var(--line)}
+.col.good{background:var(--forest);color:#EEF2EC;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.col.good::after{content:"";position:absolute;right:-80px;top:-80px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(198,151,73,.35),transparent 70%);pointer-events:none}
+.col h3{margin-bottom:22px;font-size:1.7rem}
+.col.good h3{color:#F0CF92}
+.col ul{list-style:none;display:grid;gap:16px}
+.col li{display:flex;gap:14px;align-items:flex-start}
+.col li span.i{flex:0 0 28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:.9rem;font-weight:700;margin-top:2px}
+.bad li span.i{background:#E6DED1;color:#8A8277}
+.bad li{color:var(--muted)}
+.good li span.i{background:var(--gold);color:var(--forest)}
+.good li b{color:#F0CF92}
+.why12{background:linear-gradient(180deg,var(--cream) 0%,var(--cream2) 100%);padding-top:20px}
+.why-box{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;background:#fff;border-radius:28px;padding:56px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:18px;text-align:center}
+.vs .num{font-variant-numeric:lining-nums;font-family:var(--serif);font-size:clamp(4rem,8vw,6.6rem);line-height:1;font-weight:700}
+.vs .a .num{color:#B0A697;text-decoration:line-through;text-decoration-thickness:3px}
+.vs .b .num{color:var(--terra)}
+.vs small{display:block;font-size:.95rem;color:var(--muted);margin-top:8px;line-height:1.4}
+.vs .b small{color:var(--forest);font-weight:700}
+.people{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin-top:18px}
+.people i{width:12px;height:12px;border-radius:50%;background:#D8D0C2}
+.b .people i{background:var(--terra);width:16px;height:16px}
+.reasons{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+.reason{padding:20px;border-radius:14px;background:var(--cream);border-left:4px solid var(--gold)}
+.reason b{display:block;color:var(--forest);font-size:1.05rem;margin-bottom:4px}
+.reason p{font-size:.98rem;color:var(--muted);line-height:1.55}
+.packages{background:var(--cream2)}
+.pk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:56px}
+.card{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:.3s;border:1px solid var(--line)}
+.card:hover{transform:translateY(-6px)}
+.card .ph{position:relative;aspect-ratio:4/3;overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.card:hover .ph img{transform:scale(1.04)}
+.badge{position:absolute;left:16px;top:16px;background:rgba(250,247,242,.97);color:var(--terra-d);font-weight:700;font-size:.85rem;padding:8px 14px;border-radius:999px;display:flex;align-items:center;gap:8px;box-shadow:0 6px 20px -8px rgba(0,0,0,.35);max-width:calc(100% - 32px)}
+.badge.hot{background:var(--terra);color:#fff}
+.badge .dot{background:currentColor;animation:none;box-shadow:none}
+.card .body{padding:30px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:1.65rem;margin-bottom:6px}
+.card .tagline{font-family:var(--serif);font-style:italic;color:var(--terra-d);font-size:1.2rem;margin-bottom:16px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.facts span{font-size:.82rem;font-weight:600;background:var(--cream);color:var(--forest);padding:6px 12px;border-radius:999px;border:1px solid var(--line)}
+.card p.desc{font-size:1rem;color:var(--muted);margin-bottom:22px}
+.seats{margin-top:auto;padding:18px;background:var(--cream);border-radius:12px;margin-bottom:20px}
+.seats-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;font-size:.92rem;margin-bottom:10px}
+.seats-top b{color:var(--forest)}
+.seats-top span{color:var(--terra-d);font-weight:700;white-space:nowrap}
+.bar{height:8px;border-radius:9px;background:#E6DED1;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,var(--gold),var(--terra))}
+.seats small{display:block;margin-top:10px;color:var(--muted);font-size:.85rem;line-height:1.45}
+.card .btn{width:100%}
+.waitnote{margin-top:44px;text-align:center;color:var(--forest);font-size:1.02rem;background:#fff;border:1px dashed var(--gold);border-radius:14px;padding:18px 24px}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:60px;position:relative}
+.timeline::before{content:"";position:absolute;top:34px;left:12%;right:12%;height:2px;background:repeating-linear-gradient(90deg,var(--gold) 0 10px,transparent 10px 18px)}
+.step{text-align:center;position:relative}
+.step .ic{width:70px;height:70px;border-radius:50%;margin:0 auto 22px;display:grid;place-items:center;background:var(--forest);color:#F0CF92;font-size:1.7rem;position:relative;border:6px solid var(--cream)}
+.step .t{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--terra-d);font-weight:700}
+.step h3{font-size:1.45rem;margin:6px 0 10px}
+.step p{font-size:.98rem;color:var(--muted)}
+.day-photo{display:grid;grid-template-columns:1.1fr 1fr;margin-top:80px;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.day-photo img{width:100%;height:100%;object-fit:cover;min-height:380px}
+.day-photo blockquote{background:var(--forest);color:#F3EFE6;padding:56px;display:flex;flex-direction:column;justify-content:center;font-family:var(--serif);font-size:1.75rem;line-height:1.35;font-style:italic}
+.day-photo cite{font-family:var(--sans);font-style:normal;font-size:.95rem;color:#F0CF92;margin-top:20px}
+.team{background:#fff}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:56px}
+.role{padding:34px 28px;border-radius:var(--r);background:var(--cream);border:1px solid var(--line);transition:.3s}
+.role:hover{border-color:var(--gold);transform:translateY(-4px)}
+.role .ic{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;background:var(--terra);color:#fff;margin-bottom:20px}
+.role h3{font-size:1.4rem;margin-bottom:10px}
+.role p{font-size:.98rem;color:var(--muted)}
+.safety{background:var(--forest);color:#E9EEE8}
+.safety h2,.safety h3{color:#fff}
+.safety .eyebrow{color:#F0CF92}
+.safety .lead{color:#CFD9D1}
+.safe-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;margin-top:56px;align-items:start}
+.safe-list{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.safe-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:26px}
+.safe-item h3{font-size:1.3rem;margin-bottom:8px;color:#F0CF92}
+.safe-item p{font-size:.97rem;color:#D9E2DA}
+.family{background:var(--cream);color:var(--ink);border-radius:22px;padding:40px}
+.family .eyebrow{color:var(--terra-d)}
+.family h3{color:var(--forest);font-size:1.8rem;margin-bottom:12px}
+.family p{color:var(--muted);margin-bottom:18px}
+.chat{background:#fff;border-radius:16px;padding:18px;border:1px solid var(--line)}
+.msg{background:#E7F5E3;border-radius:14px 14px 14px 4px;padding:12px 16px;font-size:.95rem;line-height:1.5;max-width:94%}
+.msg small{display:block;color:#5E6C60;font-size:.78rem;margin-top:4px}
+.chat-head{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--forest);font-size:.95rem;margin-bottom:12px}
+.chat-head i{width:34px;height:34px;border-radius:50%;background:var(--forest);color:#F0CF92;display:grid;place-items:center;font-style:normal;font-family:var(--serif);font-weight:700}
+.community{background:var(--cream2)}
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:56px}
+.s3{background:#fff;border-radius:var(--r);padding:40px 32px;box-shadow:var(--shadow)}
+.s3 .n{font-variant-numeric:lining-nums;font-family:var(--serif);font-size:4rem;line-height:1;color:var(--gold);font-weight:700}
+.s3 h3{margin:10px 0;font-size:1.5rem}
+.s3 p{color:var(--muted);font-size:1rem}
+.contact-box{display:grid;grid-template-columns:1fr 1.1fr;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);background:#fff}
+.contact-side{background:linear-gradient(rgba(27,59,47,.88),rgba(27,59,47,.95)),url(img/barichara.jpg) center/cover;color:#EEF2EC;padding:56px}
+.contact-side h2{color:#fff}
+.contact-side .eyebrow{color:#F0CF92}
+.contact-side p{color:#D4DED6;margin-bottom:22px}
+.urgent{background:rgba(198,151,73,.18);border:1px solid rgba(240,207,146,.5);border-radius:14px;padding:18px 20px;color:#FBE9C6;font-size:.98rem;margin-bottom:26px}
+.urgent b{color:#fff}
+.direct{display:grid;gap:12px}
+.btn-wa{background:#1A7F4B;color:#fff}.btn-wa:hover{background:#156A3E}
+.btn-line{background:#06C755;color:#06301A}.btn-line:hover{background:#05b04b}
+form{padding:56px;display:grid;gap:20px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+label{display:block;font-weight:600;font-size:.95rem;color:var(--forest);margin-bottom:8px}
+input,select{width:100%;font:1rem var(--sans);padding:14px 16px;border:1.5px solid #CFC4B1;border-radius:12px;background:var(--cream);color:var(--ink);min-height:54px}
+input:focus,select:focus{border-color:var(--forest);background:#fff}
+fieldset{border:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips label{margin:0;cursor:pointer;position:relative}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips span{display:inline-block;padding:11px 18px;border-radius:999px;border:1.5px solid #CFC4B1;font-weight:600;font-size:.95rem;color:var(--forest);background:var(--cream);transition:.2s}
+.chips input:checked+span{background:var(--forest);color:#fff;border-color:var(--forest)}
+.chips input:focus-visible+span{outline:3px solid var(--gold);outline-offset:2px}
+.form-note{font-size:.85rem;color:var(--muted)}
+.ok{display:none;padding:56px;text-align:center;align-content:center;min-height:100%}
+.ok .check{width:84px;height:84px;border-radius:50%;background:var(--forest);color:#F0CF92;display:grid;place-items:center;margin:0 auto 22px;font-size:2.4rem}
+.ok h3{font-size:2rem;margin-bottom:12px}
+.ok p{color:var(--muted)}
+footer{background:#132A21;color:#B9C6BD;padding:56px 0 40px;font-size:.95rem}
+.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+footer .brand{color:#fff}
+.proto{margin-top:30px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);font-size:.85rem;color:#9AAAA0}
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(12,22,18,.72);backdrop-filter:blur(4px)}
+.modal.open{display:flex}
+.mbox{background:var(--cream);border-radius:24px;max-width:860px;width:100%;max-height:92vh;overflow:auto;position:relative;animation:up .35s ease}
+@keyframes up{from{transform:translateY(30px);opacity:0}}
+.mbox .mimg{height:250px;background-size:cover;background-position:center;position:relative}
+.mbox .mimg::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(14,28,22,.85),transparent 65%)}
+.mbox .mimg h3{position:absolute;left:36px;right:80px;bottom:24px;color:#fff;font-size:2.1rem;z-index:1}
+.close{position:absolute;right:18px;top:18px;z-index:2;width:48px;height:48px;border-radius:50%;border:0;background:rgba(250,247,242,.95);font-size:1.6rem;cursor:pointer;color:var(--forest)}
+.mcontent{padding:30px 36px 40px}
+.mcontent h4{font-family:var(--serif);font-size:1.5rem;color:var(--forest);margin:22px 0 10px}
+html[lang="ja"] .mcontent h4{font-family:"Noto Sans JP",var(--sans);font-size:1.2rem}
+.mday{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:1rem}
+.mday b{color:var(--terra-d)}
+.itin{list-style:none;display:grid;gap:10px}
+.itin li{display:grid;grid-template-columns:110px 1fr;gap:16px;font-size:1rem}
+.itin li b{color:var(--forest)}
+.mcta{margin-top:30px;background:var(--forest);color:#EEF2EC;border-radius:16px;padding:26px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.mcta p{margin:0;font-size:1rem;max-width:460px}
+.mcta b{color:#F0CF92}
+.mcontent .facts span:last-child{background:var(--terra);color:#fff;border-color:var(--terra)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:1180px){
+  .menu{display:none}.burger{display:block}
+  .menu.show{display:flex;flex-direction:column;position:absolute;top:84px;left:0;right:0;background:var(--cream);padding:20px 28px;gap:6px;box-shadow:0 20px 30px -20px rgba(0,0,0,.3)}
+  .menu.show a{color:var(--forest);font-size:1.1rem;padding:10px 0}
+  .pk-grid,.team-grid{grid-template-columns:1fr 1fr}
+  .why-box,.safe-grid,.contact-box,.day-photo{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  body{font-size:17px}
+  section{padding:76px 0}
+  .wrap{padding:0 18px}
+  .nav{gap:10px}
+  .nav .btn-talk{display:none}
+  .lang button{padding:8px 9px;font-size:.8rem}
+  .brand b{font-size:1.15rem;letter-spacing:.1em}.brand small{font-size:.6rem;letter-spacing:.06em}
+  .trust{grid-template-columns:1fr 1fr}
+  .trust div{padding:16px 14px;font-size:.88rem;border-bottom:1px solid var(--line)}
+  .trust svg{flex-basis:26px;width:26px}
+  .compare,.pk-grid,.team-grid,.steps3,.safe-list,.reasons,.row2{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr;gap:34px}.timeline::before{display:none}
+  .col,.why-box,form,.contact-side,.family,.day-photo blockquote,.ok{padding:30px 22px}
+  .hero{padding-top:120px;background-position:62% 40%}
+  .hero::before{background:linear-gradient(to bottom,rgba(14,28,22,.55),rgba(14,28,22,.78) 45%,rgba(14,28,22,.9))}
+  .hero-btns .btn{width:100%}
+  .mday,.itin li{grid-template-columns:1fr;gap:2px}
+  .mcontent{padding:22px 20px 28px}
+  .mbox .mimg h3{left:20px;right:70px;font-size:1.5rem}
+  .modal{padding:10px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header id="top">
+  <div class="wrap nav">
+    <a href="#inicio" class="brand" aria-label="Alma Colombia"><b>ALMA COLOMBIA</b><small data-i18n="brandTag">Viajes con Propósito 60+</small></a>
+    <ul class="menu" id="menu">
+      <li><a href="#diferencia" data-i18n="navExp">Experiencias</a></li>
+      <li><a href="#paquetes" data-i18n="navPk">Paquetes</a></li>
+      <li><a href="#equipo" data-i18n="navTeam">Acompañamiento</a></li>
+      <li><a href="#seguridad" data-i18n="navSafe">Seguridad</a></li>
+      <li><a href="#comunidad" data-i18n="navCom">Comunidad</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Idioma / Language / 言語">
+        <button data-lang="es" class="on">ES</button><button data-lang="en">EN</button><button data-lang="ja">日本語</button>
+      </div>
+      <a href="#contacto" class="btn btn-primary btn-talk" data-i18n="navCta">Hablar con un asesor</a>
+      <button class="burger" aria-label="Menú" id="burger">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="scarcity-pill"><span class="dot"></span><span data-i18n="heroPill">Salidas 2027 · Grupos exclusivos de máximo 12 personas</span></div>
+      <h1 data-i18n="heroTitle">No viajas para tachar lugares. Viajas para <em>volver a sentirte vivo</em>, en buena compañía.</h1>
+      <p class="sub" data-i18n="heroSub">Viajes boutique por la Colombia auténtica para personas de 60 a 75 años. Grupos exclusivos de máximo 12 viajeros, destinos que pocos conocen y un equipo que te acompaña de principio a fin.</p>
+      <div class="hero-btns">
+        <a href="#paquetes" class="btn btn-primary" data-i18n="heroBtn1">Explorar los viajes</a>
+        <a href="#contacto" class="btn btn-ghost" data-i18n="heroBtn2">Agendar charla sin compromiso</a>
+      </div>
+    </div>
+    <div class="trust">
+      <div><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14.5 14.6c.8-.4 1.6-.6 2.5-.6 2.8 0 5 2.2 5 5"/></svg><span data-i18n="trust1">Grupos de máximo 12 personas</span></div>
+      <div><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="trust2">Ritmo humano, sin prisas</span></div>
+      <div><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.4-7-10.2V5.5L12 3l7 2.5v5.3C19 16.6 12 21 12 21z"/><path d="M12 8v6M9 11h6"/></svg><span data-i18n="trust3">Equipo médico y especialistas</span></div>
+      <div><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg><span data-i18n="trust4">Conexión antes y después del viaje</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="diff" id="diferencia">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow" data-i18n="diffEy">La diferencia</span>
+      <h2 data-i18n="diffTitle">Esto no es un tour típico</h2>
+      <p class="lead" data-i18n="diffLead">La mayoría de los viajes organizados te llevan de foto en foto. Nosotros creamos días que se recuerdan durante años, compartidos con personas que se vuelven amigos.</p>
+    </div>
+    <div class="compare">
+      <div class="col bad reveal">
+        <h3 data-i18n="badTitle">El tour masivo</h3>
+        <ul>
+          <li><span class="i">✕</span><span data-i18n="bad1">Buses de 40 o 50 personas que no se conocen entre sí</span></li>
+          <li><span class="i">✕</span><span data-i18n="bad2">15 minutos por parada: bajar, foto y volver a subir</span></li>
+          <li><span class="i">✕</span><span data-i18n="bad3">Filas, esperas eternas y madrugones sin sentido</span></li>
+          <li><span class="i">✕</span><span data-i18n="bad4">Un guía con micrófono para todo el grupo</span></li>
+          <li><span class="i">✕</span><span data-i18n="bad5">Vuelves a casa con fotos, pero sin historias</span></li>
+        </ul>
+      </div>
+      <div class="col good reveal">
+        <h3 data-i18n="goodTitle">La experiencia Alma Colombia</h3>
+        <ul>
+          <li><span class="i">✓</span><span data-i18n="good1"><b>Máximo 12 viajeros</b>: en dos días ya se conocen por su nombre</span></li>
+          <li><span class="i">✓</span><span data-i18n="good2">Experiencias que se sienten: cosechar café, mirar las estrellas, crear con tus manos</span></li>
+          <li><span class="i">✓</span><span data-i18n="good3">Tiempo para conversar, descansar y simplemente estar</span></li>
+          <li><span class="i">✓</span><span data-i18n="good4">Especialistas locales que comparten lo que aman: biólogos, astrónomos, artesanos, chefs</span></li>
+          <li><span class="i">✓</span><span data-i18n="good5">Seguridad y salud cuidadas en cada detalle, sin que se sienta clínico</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why12" id="por-que-12">
+  <div class="wrap">
+    <div class="why-box reveal">
+      <div class="vs">
+        <div class="a"><div class="num">45</div><small data-i18n="vsA">viajeros en un tour masivo</small><div class="people" aria-hidden="true" id="ppl45"></div></div>
+        <div class="b"><div class="num">12</div><small data-i18n="vsB">máximo en cada salida Alma</small><div class="people" aria-hidden="true" id="ppl12"></div></div>
+      </div>
+      <div>
+        <span class="eyebrow" data-i18n="whyEy">¿Por qué máximo 12?</span>
+        <h2 data-i18n="whyTitle">Pocos lugares, a propósito</h2>
+        <p class="lead" data-i18n="whyLead">Limitar cada grupo a 12 personas no es un detalle: es lo que hace posible todo lo demás. Por eso los cupos son pocos y se cierran rápido.</p>
+        <div class="reasons">
+          <div class="reason"><b data-i18n="r1t">Conversar de verdad</b><p data-i18n="r1p">Nadie se siente perdido entre desconocidos. Cada noche, la mesa es una sola.</p></div>
+          <div class="reason"><b data-i18n="r2t">Lugares donde un bus no entra</b><p data-i18n="r2p">Fincas privadas, casas coloniales, talleres íntimos y termales que solo reciben grupos pequeños.</p></div>
+          <div class="reason"><b data-i18n="r3t">Ritmo humano</b><p data-i18n="r3p">Sin filas ni esperas eternas. Salimos cuando el grupo está listo, no cuando lo dice el bus.</p></div>
+          <div class="reason"><b data-i18n="r4t">Atención personal</b><p data-i18n="r4p">Anfitrión, especialistas y respaldo de salud conocen tu nombre, tus gustos y lo que necesitas.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="packages" id="paquetes">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow" data-i18n="pkEy">Paquetes piloto 2027</span>
+      <h2 data-i18n="pkTitle">Tres viajes para despertar los sentidos</h2>
+      <p class="lead" data-i18n="pkLead">Cada salida admite solo 12 viajeros. Cuando se completan los 12 lugares, el grupo se cierra y abrimos lista de espera para la siguiente fecha.</p>
+    </div>
+    <div class="pk-grid">
+      <article class="card reveal">
+        <div class="ph"><img src="img/barichara.jpg" alt="Cena con velas en una calle empedrada de Barichara" loading="lazy"><span class="badge"><span class="dot"></span><span data-i18n="b1">Quedan 4 de 12 cupos</span></span></div>
+        <div class="body">
+          <h3 data-i18n="p1t">Barichara &amp; Chicamocha</h3>
+          <div class="tagline" data-i18n="p1s">Piedra, Fuego y Tertulia</div>
+          <div class="facts"><span data-i18n="p1f1">12 días</span><span data-i18n="p1f2">Altitud cómoda · 1.300 m</span><span data-i18n="p1f3">Nivel físico suave</span></div>
+          <p class="desc" data-i18n="p1d">Caminata en bajada por el Camino Real, taller de papel de fique con maestros locales y una cena privada en casa colonial con música andina en vivo.</p>
+          <div class="seats"><div class="seats-top"><b data-i18n="p1date">Salida: 6 de marzo de 2027</b><span data-i18n="p1left">8/12 reservados</span></div><div class="bar"><i style="width:66.6%"></i></div><small data-i18n="seatNote">Al completar 12 viajeros, la salida se cierra.</small></div>
+          <button class="btn btn-outline" data-open="0" data-i18n="openBtn">Ver día típico e itinerario</button>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="ph"><img src="img/cafe-aves.jpg" alt="Grupo con binoculares y café en una finca cafetera al amanecer" loading="lazy"><span class="badge hot"><span class="dot"></span><span data-i18n="b2">Últimos 3 cupos</span></span></div>
+        <div class="body">
+          <h3 data-i18n="p2t">Eje Cafetero Profundo</h3>
+          <div class="tagline" data-i18n="p2s">Café, Aves y Termales</div>
+          <div class="facts"><span data-i18n="p2f1">14 días</span><span data-i18n="p2f2">Altitud media · 1.500–1.900 m</span><span data-i18n="p2f3">Nivel suave-moderado</span></div>
+          <p class="desc" data-i18n="p2d">Filandia, Pijao y Salamina. Avistamiento de aves con biólogo, cata sensorial con caficultores y termales naturales privados al atardecer.</p>
+          <div class="seats"><div class="seats-top"><b data-i18n="p2date">Salida: 10 de abril de 2027</b><span data-i18n="p2left">9/12 reservados</span></div><div class="bar"><i style="width:75%"></i></div><small data-i18n="seatNote">Al completar 12 viajeros, la salida se cierra.</small></div>
+          <button class="btn btn-outline" data-open="1" data-i18n="openBtn">Ver día típico e itinerario</button>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="ph"><img src="img/estrellas.jpg" alt="Observación de estrellas en el desierto de Villa de Leyva" loading="lazy"><span class="badge"><span class="dot"></span><span data-i18n="b3">5 cupos disponibles · Próxima salida</span></span></div>
+        <div class="body">
+          <h3 data-i18n="p3t">Boyacá Estelar</h3>
+          <div class="tagline" data-i18n="p3s">Cielos, Barro e Historia</div>
+          <div class="facts"><span data-i18n="p3f1">10 días</span><span data-i18n="p3f2">Altitud 2.100 m · aclimatación gradual</span><span data-i18n="p3f3">Nivel físico suave</span></div>
+          <p class="desc" data-i18n="p3d">Villa de Leyva, Ráquira y Monguí. Astronomía con sillas cómodas y vino caliente, taller de torno cerámico y relatos históricos vivos.</p>
+          <div class="seats"><div class="seats-top"><b data-i18n="p3date">Salida: 15 de mayo de 2027</b><span data-i18n="p3left">7/12 reservados</span></div><div class="bar"><i style="width:58.3%"></i></div><small data-i18n="seatNote">Al completar 12 viajeros, la salida se cierra.</small></div>
+          <button class="btn btn-outline" data-open="2" data-i18n="openBtn">Ver día típico e itinerario</button>
+        </div>
+      </article>
+    </div>
+    <p class="waitnote reveal" data-i18n="waitNote">🕯️ <b>Así funcionan los cupos:</b> cada salida tiene 12 lugares. Cuando se llenan, el grupo se cierra para cuidar la experiencia y abrimos lista de espera para la siguiente fecha.</p>
+  </div>
+</section>
+<section class="day" id="dia">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow" data-i18n="dayEy">Un día con nosotros</span>
+      <h2 data-i18n="dayTitle">Así se vive un día con nosotros</h2>
+      <p class="lead" data-i18n="dayLead">Emoción por la mañana, calma a mediodía, bienestar en la tarde y una mesa compartida por la noche. El equilibrio que hace que cada día valga la pena.</p>
+    </div>
+    <div class="timeline">
+      <div class="step reveal"><div class="ic">☀</div><div class="t" data-i18n="d1k">Mañana</div><h3 data-i18n="d1t">Experiencia inmersiva</h3><p data-i18n="d1p">Con un especialista local: aves, café, cerámica o historia contada como un relato.</p></div>
+      <div class="step reveal"><div class="ic">❦</div><div class="t" data-i18n="d2k">Mediodía</div><h3 data-i18n="d2t">Comida sin prisas</h3><p data-i18n="d2p">Cocina local en buena mesa y tiempo de descanso. Nadie corre.</p></div>
+      <div class="step reveal"><div class="ic">❋</div><div class="t" data-i18n="d3k">Tarde</div><h3 data-i18n="d3t">Bienestar suave</h3><p data-i18n="d3p">Termales, estiramientos, masaje o simplemente tiempo libre. Tú eliges.</p></div>
+      <div class="step reveal"><div class="ic">☾</div><div class="t" data-i18n="d4k">Noche</div><h3 data-i18n="d4t">Cena y tertulia</h3><p data-i18n="d4p">Una sola mesa, historias compartidas y la sensación de pertenecer.</p></div>
+    </div>
+    <div class="day-photo reveal">
+      <img src="img/acompanamiento.jpg" alt="Grupo brindando en una mesa larga en una casa colonial" loading="lazy">
+      <blockquote><span data-i18n="quote">“Llegué sin conocer a nadie. Volví a casa con once amigos y ganas de seguir viajando.”</span><cite data-i18n="quoteBy">— Así queremos que se sienta cada viajero</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="team" id="equipo">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow" data-i18n="teamEy">Acompañamiento</span>
+      <h2 data-i18n="teamTitle">El equipo que te cuida</h2>
+      <p class="lead" data-i18n="teamLead">Con grupos de máximo 12 personas, cada miembro del equipo te conoce de verdad. Viajas con libertad, sabiendo que alguien está pendiente.</p>
+    </div>
+    <div class="team-grid">
+      <div class="role reveal"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div><h3 data-i18n="t1t">Anfitrión social</h3><p data-i18n="t1p">Integra al grupo desde el primer día, cuida que nadie quede al margen y guía las tertulias de cada noche.</p></div>
+      <div class="role reveal"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.6 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg></div><h3 data-i18n="t2t">Especialistas locales</h3><p data-i18n="t2p">Biólogo, astrónomo, chef y maestros artesanos que comparten lo que aman, con calma y cercanía.</p></div>
+      <div class="role reveal"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.4-7-10.2V5.5L12 3l7 2.5v5.3C19 16.6 12 21 12 21z"/><path d="M12 8v6M9 11h6"/></svg></div><h3 data-i18n="t3t">Salud y bienestar</h3><p data-i18n="t3p">Enfermería acompañante, fisioterapia suave y médico disponible 24/7 en cada destino.</p></div>
+      <div class="role reveal"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h9M8.5 3v2M6 5c0 4 3 7 7 8M11 5c0 4-3 7-7 8M13 21l4-10 4 10M14.5 17h5"/></svg></div><h3 data-i18n="t4t">Traducción puerta a puerta</h3><p data-i18n="t4p">Acompañamiento bilingüe en inglés o japonés desde tu llegada al aeropuerto hasta tu regreso.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="safety" id="seguridad">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="safeEy">Seguridad y tranquilidad</span>
+      <h2 data-i18n="safeTitle">Tranquilidad para ti y para quienes te quieren</h2>
+      <p class="lead" data-i18n="safeLead">Elegimos cada destino, hotel y actividad pensando en la comodidad y la seguridad de viajeros de 60 a 75 años.</p>
+    </div>
+    <div class="safe-grid">
+      <div class="safe-list">
+        <div class="safe-item reveal"><h3 data-i18n="s1t">Altitud explicada</h3><p data-i18n="s1p">Cada viaje indica su altitud real y, cuando hace falta, planeamos una aclimatación gradual.</p></div>
+        <div class="safe-item reveal"><h3 data-i18n="s2t">Hoteles accesibles</h3><p data-i18n="s2p">Hoteles boutique seleccionados, sin escaleras difíciles y con habitaciones cómodas y silenciosas.</p></div>
+        <div class="safe-item reveal"><h3 data-i18n="s3t">Seguro internacional</h3><p data-i18n="s3p">Seguro médico de viaje incluido y asistencia en tu idioma durante todo el recorrido.</p></div>
+        <div class="safe-item reveal"><h3 data-i18n="s4t">Protocolos médicos</h3><p data-i18n="s4p">Plan de emergencia en cada ruta, clínicas aliadas cercanas y transporte privado disponible.</p></div>
+      </div>
+      <div class="family reveal">
+        <span class="eyebrow" data-i18n="famEy">Para hijos y familiares</span>
+        <h3 data-i18n="famTitle">Ustedes también viajan tranquilos</h3>
+        <p data-i18n="famP">Cada día la familia recibe un reporte privado por WhatsApp o LINE, con fotos y novedades, y tiene contacto directo con el anfitrión del grupo.</p>
+        <div class="chat">
+          <div class="chat-head"><i>A</i><span data-i18n="chatHead">Alma Colombia · Reporte diario</span></div>
+          <div class="msg"><span data-i18n="chat1">Buenas noches 🌙 Hoy tu mamá cosechó café en Pijao y fue la primera en terminar la cata. Cenó muy bien y ya está descansando. Mañana: aves al amanecer.</span><small>21:04 ✓✓</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="community" id="comunidad">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow" data-i18n="comEy">Comunidad</span>
+      <h2 data-i18n="comTitle">Una comunidad que no termina en el aeropuerto</h2>
+      <p class="lead" data-i18n="comLead">Los lazos que se crean en el viaje merecen continuar. Por eso te acompañamos antes, durante y después.</p>
+    </div>
+    <div class="steps3">
+      <div class="s3 reveal"><div class="n">01</div><h3 data-i18n="c1t">Videollamada antes de volar</h3><p data-i18n="c1p">El grupo se conoce en una charla virtual. Cuando llegas, ya hay caras amigas esperándote.</p></div>
+      <div class="s3 reveal"><div class="n">02</div><h3 data-i18n="c2t">Convivencia real en Colombia</h3><p data-i18n="c2p">Días compartidos, risas, aprendizajes y momentos que solo entiende quien estuvo allí.</p></div>
+      <div class="s3 reveal"><div class="n">03</div><h3 data-i18n="c3t">Círculo de viajeros al volver</h3><p data-i18n="c3p">Encuentros virtuales, novedades y prioridad para las próximas salidas. La amistad sigue.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div class="contact-box reveal">
+      <div class="contact-side">
+        <span class="eyebrow" data-i18n="ctEy">Asesoría personal</span>
+        <h2 data-i18n="ctTitle">Asegura tu lugar antes de que se cierre el grupo</h2>
+        <p data-i18n="ctP">Cuéntanos un poco de ti y un asesor te contactará por el canal que prefieras para resolver tus dudas, sin compromiso.</p>
+        <div class="urgent" data-i18n="ctUrgent"><b>Cupos 2027:</b> solo 12 lugares por salida. Las fechas de marzo y abril están a pocos cupos de cerrarse; después, solo lista de espera.</div>
+        <div class="direct">
+          <a class="btn btn-wa" href="#" data-demo data-i18n="waBtn">Escribir por WhatsApp</a>
+          <a class="btn btn-line" href="#" data-demo data-i18n="lineBtn">Escribir por LINE</a>
+        </div>
+      </div>
+      <div>
+        <form id="form" novalidate>
+          <div class="row2">
+            <div><label for="f-name" data-i18n="fName">Nombre</label><input id="f-name" required autocomplete="name"></div>
+            <div><label for="f-country" data-i18n="fCountry">País</label><input id="f-country" required autocomplete="country-name"></div>
+          </div>
+          <div class="row2">
+            <div><label for="f-age" data-i18n="fAge">Edad aproximada</label><select id="f-age"><option>60–64</option><option>65–69</option><option>70–75</option><option data-i18n="fAgeX">Prefiero no decirlo</option></select></div>
+            <div><label for="f-trip" data-i18n="fTrip">Viaje de interés</label><select id="f-trip"><option data-i18n="p1t">Barichara &amp; Chicamocha</option><option data-i18n="p2t">Eje Cafetero Profundo</option><option data-i18n="p3t">Boyacá Estelar</option><option data-i18n="fTripX">Aún no lo sé</option></select></div>
+          </div>
+          <fieldset>
+            <label data-i18n="fChannel">Canal preferido</label>
+            <div class="chips">
+              <label><input type="radio" name="ch" value="WhatsApp" checked><span>WhatsApp</span></label>
+              <label><input type="radio" name="ch" value="LINE"><span>LINE</span></label>
+              <label><input type="radio" name="ch" value="mail"><span data-i18n="chMail">Correo</span></label>
+              <label><input type="radio" name="ch" value="video"><span data-i18n="chVideo">Videollamada</span></label>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn btn-primary" data-i18n="fSubmit">Quiero asegurar mi lugar</button>
+          <p class="form-note" data-i18n="fNote">Sin compromiso de pago. Tus datos solo se usan para contactarte.</p>
+        </form>
+        <div class="ok" id="ok">
+          <div><div class="check">✓</div>
+          <h3 data-i18n="okT">¡Gracias! Tu lugar está en camino</h3>
+          <p data-i18n="okP">Un asesor de Alma Colombia te contactará en menos de 24 horas por el canal que elegiste. Mientras tanto, apartamos tu interés en la salida seleccionada.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="brand"><b>ALMA COLOMBIA</b><small data-i18n="brandTag">Viajes con Propósito 60+</small></div>
+      <div data-i18n="footTxt">Barichara · Eje Cafetero · Boyacá<br>Grupos exclusivos de máximo 12 viajeros</div>
+    </div>
+    <p class="proto" data-i18n="proto">Prototipo piloto — Alma Colombia. Fechas, cupos y contenidos son ilustrativos para validación del concepto. © 2026</p>
+  </div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-title">
+  <div class="mbox">
+    <button class="close" aria-label="Cerrar" id="mclose">×</button>
+    <div class="mimg" id="m-img"><h3 id="m-title"></h3></div>
+    <div class="mcontent" id="m-body"></div>
+  </div>
+</div>
+<script>
+const I18N = {
+en:{
+brandTag:"Purposeful Journeys 60+",navExp:"Experiences",navPk:"Journeys",navTeam:"Our Care",navSafe:"Safety",navCom:"Community",navCta:"Talk to an advisor",
+heroPill:"2027 departures · Exclusive groups of 12 travelers max",
+heroTitle:"You don't travel to tick off places. You travel to <em>feel alive again</em>, in good company.",
+heroSub:"Boutique journeys through authentic Colombia for travelers aged 60 to 75. Exclusive groups of no more than 12, places few people know, and a team by your side from start to finish.",
+heroBtn1:"Explore the journeys",heroBtn2:"Book a no-obligation chat",
+trust1:"Groups of 12 people max",trust2:"Human pace, no rushing",trust3:"Medical team & specialists",trust4:"Connection before and after",
+diffEy:"The difference",diffTitle:"This is not a typical tour",diffLead:"Most organized trips take you from photo to photo. We create days you'll remember for years, shared with people who become friends.",
+badTitle:"The mass tour",bad1:"Buses of 40 or 50 strangers",bad2:"15 minutes per stop: off, photo, back on",bad3:"Lines, endless waits and pointless early starts",bad4:"One guide with a microphone for everyone",bad5:"You come home with photos, but no stories",
+goodTitle:"The Alma Colombia experience",good1:"<b>12 travelers max</b>: within two days everyone knows each other by name",good2:"Experiences you feel: harvesting coffee, stargazing, creating with your hands",good3:"Time to talk, rest and simply be",good4:"Local specialists who share what they love: biologists, astronomers, artisans, chefs",good5:"Safety and health cared for in every detail, never clinical",
+vsA:"travelers on a mass tour",vsB:"maximum on every Alma departure",whyEy:"Why 12 max?",whyTitle:"Few places, on purpose",whyLead:"Capping each group at 12 isn't a detail: it's what makes everything else possible. That's why seats are few and fill fast.",
+r1t:"Real conversation",r1p:"No one feels lost among strangers. Every night, there's just one table.",r2t:"Places a bus can't reach",r2p:"Private farms, colonial homes, intimate workshops and hot springs that only welcome small groups.",r3t:"A human pace",r3p:"No lines or endless waits. We leave when the group is ready, not when the bus says so.",r4t:"Personal attention",r4p:"Host, specialists and health support know your name, your tastes and what you need.",
+pkEy:"2027 pilot journeys",pkTitle:"Three journeys to awaken the senses",pkLead:"Each departure takes only 12 travelers. Once all 12 seats are filled, the group closes and we open a waitlist for the next date.",
+b1:"4 of 12 seats left",b2:"Last 3 seats",b3:"5 seats available · Next departure",
+p1t:"Barichara & Chicamocha",p1s:"Stone, Fire and Conversation",p1f1:"12 days",p1f2:"Comfortable altitude · 1,300 m",p1f3:"Gentle activity level",p1d:"A downhill walk along the Camino Real, a fique-paper workshop with local masters and a private dinner in a colonial home with live Andean music.",p1date:"Departs: March 6, 2027",p1left:"8/12 booked",
+p2t:"Deep Coffee Country",p2s:"Coffee, Birds and Hot Springs",p2f1:"14 days",p2f2:"Mid altitude · 1,500–1,900 m",p2f3:"Gentle to moderate",p2d:"Filandia, Pijao and Salamina. Birdwatching with a biologist, sensory tasting with coffee growers and private natural hot springs at sunset.",p2date:"Departs: April 10, 2027",p2left:"9/12 booked",
+p3t:"Starry Boyacá",p3s:"Skies, Clay and History",p3f1:"10 days",p3f2:"Altitude 2,100 m · gradual acclimatization",p3f3:"Gentle activity level",p3d:"Villa de Leyva, Ráquira and Monguí. Stargazing with comfy chairs and mulled wine, a pottery-wheel workshop and living history tales.",p3date:"Departs: May 15, 2027",p3left:"7/12 booked",
+seatNote:"Once 12 travelers join, this departure closes.",openBtn:"See a typical day & itinerary",
+waitNote:"🕯️ <b>How seats work:</b> each departure has 12 places. When they fill, the group closes to protect the experience and we open a waitlist for the next date.",
+dayEy:"A day with us",dayTitle:"What a day with us feels like",dayLead:"Wonder in the morning, calm at midday, wellbeing in the afternoon and a shared table at night. The balance that makes every day worthwhile.",
+d1k:"Morning",d1t:"Immersive experience",d1p:"With a local specialist: birds, coffee, pottery or history told as a story.",d2k:"Midday",d2t:"Unhurried lunch",d2p:"Local cooking at a good table and time to rest. No one rushes.",d3k:"Afternoon",d3t:"Gentle wellbeing",d3p:"Hot springs, stretching, massage or simply free time. Your choice.",d4k:"Evening",d4t:"Dinner & conversation",d4p:"One table, shared stories and the feeling of belonging.",
+quote:"“I arrived knowing no one. I came home with eleven friends and eager to keep traveling.”",quoteBy:"— How we want every traveler to feel",
+teamEy:"Our care",teamTitle:"The team that looks after you",teamLead:"With groups of 12 at most, every team member truly knows you. You travel freely, knowing someone is always looking out for you.",
+t1t:"Social host",t1p:"Brings the group together from day one, makes sure no one is left out and leads each evening's conversation.",t2t:"Local specialists",t2p:"Biologist, astronomer, chef and master artisans who share what they love, calmly and warmly.",t3t:"Health & wellbeing",t3p:"Travelling nurse, gentle physiotherapy and a doctor available 24/7 at every destination.",t4t:"Door-to-door translation",t4p:"Bilingual support in English or Japanese from airport arrival to your return home.",
+safeEy:"Safety & peace of mind",safeTitle:"Peace of mind for you and those who love you",safeLead:"Every destination, hotel and activity is chosen for the comfort and safety of travelers aged 60 to 75.",
+s1t:"Altitude explained",s1p:"Each journey states its real altitude and, when needed, we plan gradual acclimatization.",s2t:"Accessible hotels",s2p:"Hand-picked boutique hotels, no difficult stairs, comfortable and quiet rooms.",s3t:"International insurance",s3p:"Travel medical insurance included and assistance in your language throughout.",s4t:"Medical protocols",s4p:"Emergency plan for every route, partner clinics nearby and private transport available.",
+famEy:"For children & family",famTitle:"You can relax too",famP:"Every day the family receives a private report via WhatsApp or LINE, with photos and news, plus direct contact with the group host.",chatHead:"Alma Colombia · Daily report",chat1:"Good evening 🌙 Today your mom harvested coffee in Pijao and was first to finish the tasting. She had a lovely dinner and is resting now. Tomorrow: birds at sunrise.",
+comEy:"Community",comTitle:"A community that doesn't end at the airport",comLead:"The bonds formed on the journey deserve to continue. That's why we're with you before, during and after.",
+c1t:"Video call before you fly",c1p:"The group meets in a virtual chat. When you land, friendly faces are already waiting.",c2t:"Real time together in Colombia",c2p:"Shared days, laughter, learning and moments only those who were there understand.",c3t:"Travelers' circle back home",c3p:"Virtual gatherings, news and priority for future departures. The friendship continues.",
+ctEy:"Personal advice",ctTitle:"Secure your place before the group closes",ctP:"Tell us a little about yourself and an advisor will reach you on your preferred channel, with no obligation.",ctUrgent:"<b>2027 seats:</b> only 12 places per departure. The March and April dates are just a few seats from closing; after that, waitlist only.",
+waBtn:"Message us on WhatsApp",lineBtn:"Message us on LINE",fName:"Name",fCountry:"Country",fAge:"Approximate age",fAgeX:"Prefer not to say",fTrip:"Journey of interest",fTripX:"Not sure yet",fChannel:"Preferred channel",chMail:"Email",chVideo:"Video call",fSubmit:"I want to secure my place",fNote:"No payment commitment. Your details are only used to contact you.",
+okT:"Thank you! Your place is on its way",okP:"An Alma Colombia advisor will contact you within 24 hours on your chosen channel. Meanwhile, we've noted your interest in the selected departure.",
+footTxt:"Barichara · Coffee Country · Boyacá<br>Exclusive groups of 12 travelers max",proto:"Pilot prototype — Alma Colombia. Dates, seats and content are illustrative for concept validation. © 2026"
+},
+ja:{
+brandTag:"目的のある旅 60+",navExp:"体験",navPk:"ツアー",navTeam:"サポート",navSafe:"安全",navCom:"コミュニティ",navCta:"相談する",
+heroPill:"2027年出発 · 最大12名の少人数グループ",
+heroTitle:"名所を巡るだけの旅ではなく、<em>心が躍る</em>旅を。気の合う仲間と一緒に。",
+heroSub:"60〜75歳の方のための、本物のコロンビアを巡るブティック旅行。最大12名の少人数グループ、まだ知られていない場所、そして最初から最後まで寄り添うチーム。",
+heroBtn1:"旅を見る",heroBtn2:"無料相談を予約",
+trust1:"最大12名のグループ",trust2:"ゆったりとしたペース",trust3:"医療スタッフと専門家",trust4:"旅の前後もつながる",
+diffEy:"私たちの違い",diffTitle:"よくある団体ツアーではありません",diffLead:"多くの団体旅行は写真スポットを巡るだけ。私たちは、何年経っても思い出す一日を、友人となる仲間と共に作ります。",
+badTitle:"大型団体ツアー",bad1:"知らない人ばかり40〜50人のバス",bad2:"1か所15分：降りて、写真、また乗車",bad3:"行列、長い待ち時間、意味のない早起き",bad4:"マイクを持ったガイドが一人だけ",bad5:"写真は残っても、物語は残らない",
+goodTitle:"アルマ・コロンビアの体験",good1:"<b>最大12名</b>：2日目にはお互いを名前で呼び合う仲に",good2:"心で感じる体験：コーヒー摘み、星空観察、手づくり体験",good3:"語り合い、休み、ただ過ごす時間",good4:"好きなことを分かち合う地元の専門家：生物学者、天文学者、職人、シェフ",good5:"安全と健康に細やかな配慮。でも病院のような雰囲気はありません",
+vsA:"大型ツアーの参加人数",vsB:"アルマの各出発の最大人数",whyEy:"なぜ最大12名？",whyTitle:"あえて、少ない席数",whyLead:"1グループ12名までという制限は、すべての体験を可能にする大切な条件です。だから席は少なく、すぐに埋まります。",
+r1t:"本当の会話",r1p:"知らない人の中で迷子になることはありません。毎晩、テーブルはひとつ。",r2t:"バスが入れない場所へ",r2p:"少人数しか受け入れないプライベート農園、コロニアル邸宅、工房、温泉。",r3t:"人に合わせたペース",r3p:"行列も長い待ち時間もなし。出発はバスではなく、皆さんの準備ができた時。",r4t:"一人ひとりへの心配り",r4p:"ホスト、専門家、医療スタッフがあなたの名前や好みを把握しています。",
+pkEy:"2027年パイロットツアー",pkTitle:"五感を目覚めさせる3つの旅",pkLead:"各出発は12名限定。12席が埋まると募集を締め切り、次回日程のキャンセル待ちを受け付けます。",
+b1:"残り4席 / 12席",b2:"残りわずか3席",b3:"5席空きあり · 次回出発",
+p1t:"バリチャラ＆チカモチャ",p1s:"石と炎と語らい",p1f1:"12日間",p1f2:"快適な標高 · 1,300m",p1f3:"体力レベル：やさしい",p1d:"カミノ・レアルを下りながら歩く散策、地元の名匠とフィケ紙づくり、コロニアル邸宅でアンデス音楽の生演奏とともにプライベートディナー。",p1date:"出発：2027年3月6日",p1left:"8/12 予約済み",
+p2t:"奥深きコーヒー地方",p2s:"コーヒー、野鳥、温泉",p2f1:"14日間",p2f2:"中程度の標高 · 1,500〜1,900m",p2f3:"やさしい〜ふつう",p2d:"フィランディア、ピハオ、サラミナへ。生物学者とのバードウォッチング、農家とのコーヒーテイスティング、夕暮れの貸切天然温泉。",p2date:"出発：2027年4月10日",p2left:"9/12 予約済み",
+p3t:"星降るボヤカ",p3s:"星空、陶芸、歴史",p3f1:"10日間",p3f2:"標高2,100m · 段階的に順応",p3f3:"体力レベル：やさしい",p3d:"ビジャ・デ・レイバ、ラキラ、モングイへ。快適な椅子とホットワインで星空観察、ろくろ陶芸体験、生きた歴史の語り。",p3date:"出発：2027年5月15日",p3left:"7/12 予約済み",
+seatNote:"12名に達すると、この出発は締め切りとなります。",openBtn:"1日の流れと旅程を見る",
+waitNote:"🕯️ <b>席について：</b>各出発は12席のみ。満席になると体験の質を守るため締め切り、次回日程のキャンセル待ちを受け付けます。",
+dayEy:"私たちとの一日",dayTitle:"旅の一日はこんな感じです",dayLead:"朝は感動を、昼はゆったりと、午後は癒しを、夜は皆で食卓を。毎日を価値あるものにするバランスです。",
+d1k:"朝",d1t:"没入型の体験",d1p:"地元の専門家と：野鳥、コーヒー、陶芸、物語として語られる歴史。",d2k:"昼",d2t:"ゆっくりランチ",d2p:"地元の料理とくつろぎの時間。誰も急ぎません。",d3k:"午後",d3t:"やさしいウェルネス",d3p:"温泉、ストレッチ、マッサージ、または自由時間。お好きなように。",d4k:"夜",d4t:"夕食と語らい",d4p:"ひとつの食卓、分かち合う物語、仲間といる安心感。",
+quote:"「誰も知らずに参加しました。帰る時には11人の友人と、また旅に出たい気持ちがありました。」",quoteBy:"— すべての旅人にそう感じてほしい",
+teamEy:"サポート",teamTitle:"あなたを見守るチーム",teamLead:"最大12名だからこそ、スタッフ全員があなたをよく知っています。誰かが見守ってくれる安心の中で、自由に旅を。",
+t1t:"ソーシャルホスト",t1p:"初日からグループをつなぎ、誰も取り残されないよう気を配り、毎晩の語らいを導きます。",t2t:"地元の専門家",t2p:"生物学者、天文学者、シェフ、職人が、好きなことを穏やかに分かち合います。",t3t:"健康とウェルネス",t3p:"同行看護師、やさしい理学療法、各地で24時間対応の医師。",t4t:"空港から通訳が同行",t4p:"到着から帰国まで、英語または日本語のバイリンガルスタッフが同行します。",
+safeEy:"安全と安心",safeTitle:"あなたにも、ご家族にも安心を",safeLead:"すべての目的地、ホテル、アクティビティは60〜75歳の方の快適さと安全を考えて選んでいます。",
+s1t:"標高をわかりやすく",s1p:"各旅程に実際の標高を明記し、必要に応じて段階的な順応を計画します。",s2t:"バリアフリーのホテル",s2p:"厳選したブティックホテル。急な階段がなく、快適で静かな客室。",s3t:"海外旅行保険",s3p:"旅行医療保険付き。旅の間ずっと母国語でサポート。",s4t:"医療体制",s4p:"各ルートに緊急時計画、近隣の提携クリニック、専用車を用意。",
+famEy:"ご家族の方へ",famTitle:"ご家族も安心して",famP:"毎日、WhatsAppまたはLINEで写真付きのプライベート報告をお届けし、グループのホストと直接連絡が取れます。",chatHead:"アルマ・コロンビア · 毎日のご報告",chat1:"こんばんは🌙 今日お母様はピハオでコーヒーを摘み、テイスティングを一番に終えられました。夕食もしっかり召し上がり、今はお休み中です。明日は朝の野鳥観察です。",
+comEy:"コミュニティ",comTitle:"空港で終わらないコミュニティ",comLead:"旅で生まれた絆は続くべきもの。だから旅の前も、旅の間も、旅の後も寄り添います。",
+c1t:"出発前のビデオ通話",c1p:"オンラインで顔合わせ。到着した時には、もう知っている顔が待っています。",c2t:"コロンビアでの本当のふれあい",c2p:"共に過ごす日々、笑い、学び、そこにいた人だけがわかる瞬間。",c3t:"帰国後の旅仲間の輪",c3p:"オンラインの集い、近況の共有、次回出発の優先案内。友情は続きます。",
+ctEy:"個別相談",ctTitle:"グループが締め切られる前に席の確保を",ctP:"簡単にご記入いただければ、ご希望の方法で担当者からご連絡します。ご契約の義務はありません。",ctUrgent:"<b>2027年の席：</b>各出発12席のみ。3月と4月の日程は残りわずかで、満席後はキャンセル待ちのみとなります。",
+waBtn:"WhatsAppで問い合わせ",lineBtn:"LINEで問い合わせ",fName:"お名前",fCountry:"国",fAge:"年齢（目安）",fAgeX:"回答しない",fTrip:"ご興味のある旅",fTripX:"まだ決めていない",fChannel:"ご希望の連絡方法",chMail:"メール",chVideo:"ビデオ通話",fSubmit:"席を確保したい",fNote:"お支払いの義務はありません。個人情報はご連絡のみに使用します。",
+okT:"ありがとうございます！お席の確保を進めます",okP:"24時間以内に、ご希望の方法でアルマ・コロンビアの担当者からご連絡します。選択された出発へのご関心を承りました。",
+footTxt:"バリチャラ · コーヒー地方 · ボヤカ<br>最大12名の少人数グループ",proto:"パイロット版プロトタイプ — Alma Colombia。日程・席数・内容はコンセプト検証用の例です。© 2026"
+}};
+const TRIPS = [
+ {img:"img/barichara.jpg",
+  es:{t:"Barichara & Chicamocha · Piedra, Fuego y Tertulia",meta:["12 días","1.300 m","Nivel suave","Salida 6 mar 2027","Quedan 4 de 12 cupos"],
+   day:[["7:30","Desayuno lento en la terraza del hotel colonial"],["9:00","Caminata en bajada por el Camino Real hacia Guane, con historiador local"],["13:00","Almuerzo santandereano en casa de familia"],["15:30","Siesta o taller de papel de fique con maestras artesanas"],["19:30","Cena privada con música andina en vivo y tertulia"]],
+   it:[["Días 1–2","Llegada a Bogotá, traslado privado y descanso"],["Días 3–5","Barichara: calles de piedra, talleres y Camino Real"],["Días 6–7","Cañón del Chicamocha: miradores y almuerzo panorámico"],["Días 8–10","San Gil y aldeas cercanas, bienestar y tiempo libre"],["Días 11–12","Cena de despedida y regreso acompañado"]],
+   cta:"<b>Quedan 4 de 12 lugares.</b> Cuando se completen, esta salida se cierra y solo quedará lista de espera. Asegura tu lugar antes de que se cierre el grupo."},
+  en:{t:"Barichara & Chicamocha · Stone, Fire and Conversation",meta:["12 days","1,300 m","Gentle","Departs Mar 6, 2027","4 of 12 seats left"],
+   day:[["7:30","Slow breakfast on the colonial hotel terrace"],["9:00","Downhill Camino Real walk to Guane with a local historian"],["13:00","Santander-style lunch in a family home"],["15:30","Siesta or fique-paper workshop with master artisans"],["19:30","Private dinner with live Andean music and conversation"]],
+   it:[["Days 1–2","Arrival in Bogotá, private transfer and rest"],["Days 3–5","Barichara: stone streets, workshops and Camino Real"],["Days 6–7","Chicamocha Canyon: viewpoints and panoramic lunch"],["Days 8–10","San Gil and nearby villages, wellbeing and free time"],["Days 11–12","Farewell dinner and accompanied return"]],
+   cta:"<b>4 of 12 places left.</b> Once full, this departure closes and only the waitlist remains. Secure your place before the group closes."},
+  ja:{t:"バリチャラ＆チカモチャ · 石と炎と語らい",meta:["12日間","1,300m","やさしい","2027年3月6日出発","残り4席/12席"],
+   day:[["7:30","コロニアルホテルのテラスでゆっくり朝食"],["9:00","地元の歴史家とカミノ・レアルを下ってグアネへ"],["13:00","民家でサンタンデール料理のランチ"],["15:30","お昼寝、または職人とフィケ紙づくり"],["19:30","アンデス音楽の生演奏とプライベートディナー"]],
+   it:[["1〜2日目","ボゴタ到着、専用車で移動し休息"],["3〜5日目","バリチャラ：石畳、工房、カミノ・レアル"],["6〜7日目","チカモチャ渓谷：展望台とパノラマランチ"],["8〜10日目","サン・ヒルと周辺の村、ウェルネスと自由時間"],["11〜12日目","お別れディナーと同行付きの帰国"]],
+   cta:"<b>残り4席/12席。</b>満席になると締め切り、キャンセル待ちのみとなります。締め切り前にお席の確保を。"}},
+ {img:"img/cafe-aves.jpg",
+  es:{t:"Eje Cafetero Profundo · Café, Aves y Termales",meta:["14 días","1.500–1.900 m","Suave-moderado","Salida 10 abr 2027","Últimos 3 cupos"],
+   day:[["5:45","Café caliente y aves al amanecer con biólogo (sillas y senderos planos)"],["9:00","Desayuno de finca y cosecha simbólica de café"],["12:30","Almuerzo con caficultores y cata sensorial"],["15:00","Descanso o caminata suave por Filandia"],["17:30","Termales naturales privados al atardecer y cena compartida"]],
+   it:[["Días 1–2","Llegada a Pereira, hotel boutique y bienvenida"],["Días 3–6","Filandia: fincas, aves y talleres de café"],["Días 7–9","Pijao: pueblo sin prisas y cocina tradicional"],["Días 10–12","Salamina: arquitectura, historias y termales"],["Días 13–14","Círculo de cierre y regreso acompañado"]],
+   cta:"<b>Últimos 3 lugares de 12.</b> Es la salida más cerca de cerrarse. Asegura tu lugar antes de que se complete el grupo."},
+  en:{t:"Deep Coffee Country · Coffee, Birds and Hot Springs",meta:["14 days","1,500–1,900 m","Gentle-moderate","Departs Apr 10, 2027","Last 3 seats"],
+   day:[["5:45","Hot coffee and sunrise birding with a biologist (chairs & flat trails)"],["9:00","Farm breakfast and a symbolic coffee harvest"],["12:30","Lunch with growers and sensory tasting"],["15:00","Rest or gentle stroll through Filandia"],["17:30","Private natural hot springs at sunset, shared dinner"]],
+   it:[["Days 1–2","Arrival in Pereira, boutique hotel and welcome"],["Days 3–6","Filandia: farms, birds and coffee workshops"],["Days 7–9","Pijao: unhurried town, traditional cooking"],["Days 10–12","Salamina: architecture, stories and hot springs"],["Days 13–14","Closing circle and accompanied return"]],
+   cta:"<b>Last 3 of 12 places.</b> This is the departure closest to closing. Secure your place before the group fills."},
+  ja:{t:"奥深きコーヒー地方 · コーヒー、野鳥、温泉",meta:["14日間","1,500〜1,900m","やさしい〜ふつう","2027年4月10日出発","残りわずか3席"],
+   day:[["5:45","温かいコーヒーと生物学者との朝の野鳥観察（椅子・平坦な道）"],["9:00","農園の朝食とコーヒー摘み体験"],["12:30","農家とのランチとテイスティング"],["15:00","休息、またはフィランディアをゆっくり散策"],["17:30","夕暮れの貸切天然温泉と皆での夕食"]],
+   it:[["1〜2日目","ペレイラ到着、ブティックホテルで歓迎会"],["3〜6日目","フィランディア：農園、野鳥、コーヒー体験"],["7〜9日目","ピハオ：ゆったりした町と伝統料理"],["10〜12日目","サラミナ：建築、物語、温泉"],["13〜14日目","振り返りの会と同行付きの帰国"]],
+   cta:"<b>残りわずか3席/12席。</b>最も締め切りが近い出発です。満席になる前にお席の確保を。"}},
+ {img:"img/estrellas.jpg",
+  es:{t:"Boyacá Estelar · Cielos, Barro e Historia",meta:["10 días","2.100 m · aclimatación gradual","Nivel suave","Salida 15 may 2027","5 cupos disponibles"],
+   day:[["8:00","Desayuno tranquilo en la plaza de Villa de Leyva"],["10:00","Relato histórico vivo por casonas y conventos"],["13:00","Almuerzo boyacense sin prisas"],["15:30","Taller de torno cerámico en Ráquira o descanso"],["20:00","Observación astronómica con astrónomo, sillas cómodas, mantas y vino caliente"]],
+   it:[["Días 1–2","Llegada y aclimatación suave en Bogotá"],["Días 3–6","Villa de Leyva: historia, estrellas y bienestar"],["Días 7–8","Ráquira: barro, color y maestros alfareros"],["Días 9–10","Monguí, cena de cierre y regreso acompañado"]],
+   cta:"<b>5 lugares disponibles de 12.</b> Cuando se llene, la salida se cierra y abrimos lista de espera para la siguiente fecha."},
+  en:{t:"Starry Boyacá · Skies, Clay and History",meta:["10 days","2,100 m · gradual acclimatization","Gentle","Departs May 15, 2027","5 seats available"],
+   day:[["8:00","Relaxed breakfast on Villa de Leyva's main square"],["10:00","Living history tale through mansions and convents"],["13:00","Unhurried Boyacá-style lunch"],["15:30","Pottery-wheel workshop in Ráquira or rest"],["20:00","Stargazing with an astronomer, comfy chairs, blankets and mulled wine"]],
+   it:[["Days 1–2","Arrival and gentle acclimatization in Bogotá"],["Days 3–6","Villa de Leyva: history, stars and wellbeing"],["Days 7–8","Ráquira: clay, color and master potters"],["Days 9–10","Monguí, closing dinner and accompanied return"]],
+   cta:"<b>5 of 12 places available.</b> When full, this departure closes and we open a waitlist for the next date."},
+  ja:{t:"星降るボヤカ · 星空、陶芸、歴史",meta:["10日間","標高2,100m（段階的に順応）","やさしい","2027年5月15日出発","5席空きあり"],
+   day:[["8:00","ビジャ・デ・レイバの広場でゆったり朝食"],["10:00","邸宅や修道院を巡る生きた歴史の語り"],["13:00","ボヤカ料理のゆっくりランチ"],["15:30","ラキラでろくろ陶芸体験、または休息"],["20:00","天文学者と星空観察。快適な椅子、毛布、ホットワイン"]],
+   it:[["1〜2日目","到着、ボゴタでゆっくり高地順応"],["3〜6日目","ビジャ・デ・レイバ：歴史、星空、ウェルネス"],["7〜8日目","ラキラ：土と色と陶芸の名匠"],["9〜10日目","モングイ、お別れディナーと同行付きの帰国"]],
+   cta:"<b>12席中5席空きあり。</b>満席後は締め切り、次回日程のキャンセル待ちとなります。"}}
+];
+const LBL={es:{day:"Un día típico",it:"Itinerario resumido",btn:"Asegurar mi lugar",demo:"Demostración piloto: aquí se abriría el chat con un asesor."},en:{day:"A typical day",it:"Itinerary overview",btn:"Secure my place",demo:"Pilot demo: this would open a chat with an advisor."},ja:{day:"典型的な一日",it:"旅程の概要",btn:"席を確保する",demo:"パイロット版：ここで担当者とのチャットが開きます。"}};
+
+let lang="es";
+const ES={};
+document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n; if(!(k in ES)) ES[k]=el.innerHTML;});
+const modal=document.getElementById("modal");let cur=0,lastFocus=null;
+function setLang(l){
+  lang=l; document.documentElement.lang=l;
+  const d = l==="es"?ES:I18N[l];
+  document.querySelectorAll("[data-i18n]").forEach(el=>{const v=d[el.dataset.i18n]; if(v!==undefined) el.innerHTML=v;});
+  document.querySelectorAll(".lang button").forEach(b=>{b.classList.toggle("on",b.dataset.lang===l);b.setAttribute("aria-pressed",b.dataset.lang===l)});
+  if(modal.classList.contains("open")) fillModal(cur);
+  try{localStorage.setItem("almaLang",l)}catch(e){}
+}
+document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+
+const hdr=document.getElementById("top");
+const onScroll=()=>hdr.classList.toggle("solid",scrollY>60);
+addEventListener("scroll",onScroll,{passive:true});onScroll();
+document.getElementById("burger").onclick=()=>document.getElementById("menu").classList.toggle("show");
+document.querySelectorAll(".menu a").forEach(a=>a.addEventListener("click",()=>document.getElementById("menu").classList.remove("show")));
+
+const p45=document.getElementById("ppl45"),p12=document.getElementById("ppl12");
+for(let i=0;i<45;i++)p45.appendChild(document.createElement("i"));
+for(let i=0;i<12;i++)p12.appendChild(document.createElement("i"));
+
+function fillModal(i){
+  const t=TRIPS[i],c=t[lang],L=LBL[lang];
+  document.getElementById("m-img").style.backgroundImage="url("+t.img+")";
+  document.getElementById("m-title").textContent=c.t;
+  document.getElementById("m-body").innerHTML=
+   '<div class="facts">'+c.meta.map(m=>"<span>"+m+"</span>").join("")+'</div>'+
+   "<h4>"+L.day+"</h4>"+c.day.map(d=>'<div class="mday"><b>'+d[0]+"</b><span>"+d[1]+"</span></div>").join("")+
+   "<h4>"+L.it+'</h4><ul class="itin">'+c.it.map(d=>"<li><b>"+d[0]+"</b><span>"+d[1]+"</span></li>").join("")+"</ul>"+
+   '<div class="mcta"><p>'+c.cta+'</p><a href="#contacto" class="btn btn-primary" id="mgo">'+L.btn+"</a></div>";
+  document.getElementById("mgo").onclick=()=>{closeModal();document.getElementById("f-trip").selectedIndex=i;};
+}
+function openModal(i){cur=i;lastFocus=document.activeElement;fillModal(i);modal.classList.add("open");document.body.style.overflow="hidden";document.getElementById("mclose").focus();}
+function closeModal(){modal.classList.remove("open");document.body.style.overflow="";if(lastFocus)lastFocus.focus({preventScroll:true});}
+document.querySelectorAll("[data-open]").forEach(b=>b.onclick=()=>openModal(+b.dataset.open));
+document.getElementById("mclose").onclick=closeModal;
+modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});
+addEventListener("keydown",e=>{if(e.key==="Escape"&&modal.classList.contains("open"))closeModal()});
+
+const form=document.getElementById("form");
+form.addEventListener("submit",e=>{
+  e.preventDefault();
+  let first=null;
+  ["f-name","f-country"].forEach(id=>{const f=document.getElementById(id);if(!f.value.trim()){f.style.borderColor="#B85D3B";first=first||f}else f.style.borderColor=""});
+  if(first){first.focus();return;}
+  form.style.display="none";const okb=document.getElementById("ok");okb.style.display="grid";okb.scrollIntoView({behavior:"smooth",block:"center"});
+});
+document.querySelectorAll("[data-demo]").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();alert(LBL[lang].demo);}));
+
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target)}}),{threshold:.1});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+try{const s=localStorage.getItem("almaLang");if(s&&s!=="es"&&I18N[s])setLang(s)}catch(e){}
+</script>
+</body>
+</html>
