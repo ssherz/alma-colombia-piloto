@@ -250,6 +250,27 @@ html[lang="ja"] .mcontent h4{font-family:"Noto Sans JP",var(--sans);font-size:1.
   .mbox .mimg h3{left:20px;right:70px;font-size:1.5rem}
   .modal{padding:10px}
 }
+/* ---- Cuidado personalizado de salud y bienestar ---- */
+.care{background:var(--cream)}
+.care-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+.care-item{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px 26px;transition:.3s}
+.care-item:hover{border-color:var(--gold);transform:translateY(-3px)}
+.care-item .ic{width:54px;height:54px;border-radius:15px;display:grid;place-items:center;background:var(--forest);color:#F0CF92;margin-bottom:18px}
+.care-item h3{font-size:1.35rem;margin-bottom:8px;color:var(--forest)}
+.care-item p{font-size:.97rem;color:var(--muted)}
+.care-privacy{margin-top:34px;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:start;background:#fff;border:1.5px solid var(--gold);border-radius:22px;padding:32px 36px}
+.care-privacy .lock{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:var(--terra);color:#fff}
+.care-privacy h3{color:var(--forest);font-size:1.55rem;margin-bottom:8px}
+.care-privacy p{color:var(--muted);margin-bottom:16px}
+.care-steps{display:flex;flex-wrap:wrap;gap:10px}
+.care-steps span{background:var(--cream2);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:.92rem;font-weight:600;color:var(--forest)}
+textarea{width:100%;font:1rem var(--sans);padding:14px 16px;border:1.5px solid #CFC4B1;border-radius:12px;background:var(--cream);color:var(--ink);min-height:96px;resize:vertical;line-height:1.5}
+textarea:focus{border-color:var(--forest);background:#fff}
+textarea:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.field-care{margin-bottom:18px}
+.field-care .hint{display:block;font-size:.85rem;color:var(--muted);margin-top:6px;line-height:1.45}
+@media (max-width:1180px){.care-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){.care-grid{grid-template-columns:1fr}.care-privacy{grid-template-columns:1fr;padding:28px 22px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
@@ -440,7 +461,7 @@ html[lang="ja"] .mcontent h4{font-family:"Noto Sans JP",var(--sans);font-size:1.
       <div class="safe-list">
         <div class="safe-item reveal"><h3 data-i18n="s1t">Altitud explicada</h3><p data-i18n="s1p">Cada viaje indica su altitud real y, cuando hace falta, planeamos una aclimatación gradual.</p></div>
         <div class="safe-item reveal"><h3 data-i18n="s2t">Hoteles accesibles</h3><p data-i18n="s2p">Hoteles boutique seleccionados, sin escaleras difíciles y con habitaciones cómodas y silenciosas.</p></div>
-        <div class="safe-item reveal"><h3 data-i18n="s3t">Seguro internacional</h3><p data-i18n="s3p">Seguro médico de viaje incluido y asistencia en tu idioma durante todo el recorrido.</p></div>
+        <div class="safe-item reveal"><h3 data-i18n="s3t">Seguro internacional</h3><p data-i18n="s3p">Viajas con seguro de asistencia médica internacional (requisito para viajar) y con asistencia en tu idioma durante todo el recorrido.</p></div>
         <div class="safe-item reveal"><h3 data-i18n="s4t">Protocolos médicos</h3><p data-i18n="s4p">Plan de emergencia en cada ruta, clínicas aliadas cercanas y transporte privado disponible.</p></div>
       </div>
       <div class="family reveal">
@@ -451,6 +472,32 @@ html[lang="ja"] .mcontent h4{font-family:"Noto Sans JP",var(--sans);font-size:1.
           <div class="chat-head"><i>A</i><span data-i18n="chatHead">Alma Colombia · Reporte diario</span></div>
           <div class="msg"><span data-i18n="chat1">Buenas noches 🌙 Hoy tu mamá cosechó café en Pijao y fue la primera en terminar la cata. Cenó muy bien y ya está descansando. Mañana: aves al amanecer.</span><small>21:04 ✓✓</small></div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="care" id="bienestar">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow" data-i18n="careEy">Cuidado personalizado</span>
+      <h2 data-i18n="careTitle">Tu salud y tu bienestar, a tu ritmo</h2>
+      <p class="lead" data-i18n="careLead">Diseñamos el viaje a tu ritmo y a tus cuidados. Si nos cuentas lo que necesitas, preparamos cada detalle con discreción para que tú solo te ocupes de disfrutar.</p>
+    </div>
+    <div class="care-grid">
+      <div class="care-item reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v8M5 3v4a2 2 0 0 0 4 0V3M7 11v10M16 3c-2 1.5-3 4-3 7h3v11"/></svg></div><h3 data-i18n="k1t">Alimentación y alergias</h3><p data-i18n="k1p">Celiaquía, diabetes, comida baja en sal, vegetariana o una alergia importante: avisamos con tiempo a cada hotel y restaurante para que tu plato llegue seguro.</p></div>
+      <div class="care-item reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="2"/><path d="M12 7v6l4 2M9 9l-3 3M12 13l-3 8M14 21l-2-6"/></svg></div><h3 data-i18n="k2t">Movilidad y accesibilidad</h3><p data-i18n="k2p">Habitaciones en primer piso o con ascensor, barras de apoyo, pocos escalones y caminatas con alternativa suave. Si usas bastón, caminador o silla de ruedas, lo planeamos contigo.</p></div>
+      <div class="care-item reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="5" rx="1.5"/><path d="M8 8h8v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2zM12 11v6M9 14h6"/></svg></div><h3 data-i18n="k3t">Medicamentos y cadena de frío</h3><p data-i18n="k3p">Tus medicamentos viajan contigo, con su fórmula médica. Nosotros coordinamos nevera en el hotel y en el vehículo para la insulina u otros que lo necesiten, y respetamos tus horarios.</p></div>
+      <div class="care-item reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l6-10 4 6 3-4 5 8z"/><circle cx="17" cy="6" r="2"/></svg></div><h3 data-i18n="k4t">Altura y ritmo sin prisas</h3><p data-i18n="k4p">Cada ruta indica su altitud real. Aclimatamos de forma gradual, con mañanas activas, tardes tranquilas y descanso de verdad.</p></div>
+      <div class="care-item reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10.2V5.5L12 3l7 2.5v5.3C19 16.6 12 21 12 21z"/><path d="M12 8v6M9 11h6"/></svg></div><h3 data-i18n="k5t">Red médica aliada</h3><p data-i18n="k5p">Clínicas cercanas identificadas en cada ruta, la línea de emergencias a mano y coordinación con la asistencia médica de tu seguro, en tu idioma.</p></div>
+      <div class="care-item reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v12H4zM9 7V5h6v2M12 10v6M9 13h6"/></svg></div><h3 data-i18n="k6t">Seguro de asistencia médica</h3><p data-i18n="k6p">Te pedimos viajar con un seguro de asistencia médica internacional que cubra tus condiciones preexistentes declaradas, la evacuación y la repatriación. Te ayudamos a revisarlo.</p></div>
+    </div>
+    <div class="care-privacy reveal">
+      <div class="lock"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3M12 15v2"/></svg></div>
+      <div>
+        <h3 data-i18n="privT">Tu información de salud es tuya</h3>
+        <p data-i18n="privP">En esta página nunca te pedimos datos médicos. Solo después de nuestra videollamada, y si decides reservar, te enviamos una ficha de bienestar confidencial. Es voluntaria, la diligencias con calma, nos das tu autorización expresa y solo la ven las personas que te cuidan en el viaje. Puedes pedirnos actualizarla o borrarla cuando quieras.</p>
+        <div class="care-steps"><span data-i18n="privS1">1. Nos cuentas lo básico (opcional)</span><span data-i18n="privS2">2. Nos conocemos en videollamada</span><span data-i18n="privS3">3. Ficha confidencial después de reservar</span></div>
       </div>
     </div>
   </div>
@@ -493,6 +540,11 @@ html[lang="ja"] .mcontent h4{font-family:"Noto Sans JP",var(--sans);font-size:1.
           <div class="row2">
             <div><label for="f-age" data-i18n="fAge">Edad aproximada</label><select id="f-age"><option>60–64</option><option>65–69</option><option>70–75</option><option data-i18n="fAgeX">Prefiero no decirlo</option></select></div>
             <div><label for="f-trip" data-i18n="fTrip">Viaje de interés</label><select id="f-trip"><option data-i18n="p1t">Barichara &amp; Chicamocha</option><option data-i18n="p2t">Eje Cafetero Profundo</option><option data-i18n="p3t">Boyacá Estelar</option><option data-i18n="fTripX">Aún no lo sé</option></select></div>
+          </div>
+          <div class="field-care">
+            <label for="f-care" data-i18n="fCare">¿Tienes alguna preferencia de alimentación, movilidad o cuidado especial que debamos conocer desde ahora? (opcional)</label>
+            <textarea id="f-care" rows="3" maxlength="400" aria-describedby="f-care-hint"></textarea>
+            <small class="hint" id="f-care-hint" data-i18n="fCareHint">No hace falta contarnos detalles médicos aquí: esos se comparten en privado, con tu autorización, una vez conversemos.</small>
           </div>
           <fieldset>
             <label data-i18n="fChannel">Canal preferido</label>
@@ -560,14 +612,15 @@ quote:"“I arrived knowing no one. I came home with eleven friends and eager to
 teamEy:"Our care",teamTitle:"The team that looks after you",teamLead:"With groups of 12 at most, every team member truly knows you. You travel freely, knowing someone is always looking out for you.",
 t1t:"Social host",t1p:"Brings the group together from day one, makes sure no one is left out and leads each evening's conversation.",t2t:"Local specialists",t2p:"Biologist, astronomer, chef and master artisans who share what they love, calmly and warmly.",t3t:"Health & wellbeing",t3p:"Travelling nurse, gentle physiotherapy and a doctor available 24/7 at every destination.",t4t:"Door-to-door translation",t4p:"Bilingual support in English or Japanese from airport arrival to your return home.",
 safeEy:"Safety & peace of mind",safeTitle:"Peace of mind for you and those who love you",safeLead:"Every destination, hotel and activity is chosen for the comfort and safety of travelers aged 60 to 75.",
-s1t:"Altitude explained",s1p:"Each journey states its real altitude and, when needed, we plan gradual acclimatization.",s2t:"Accessible hotels",s2p:"Hand-picked boutique hotels, no difficult stairs, comfortable and quiet rooms.",s3t:"International insurance",s3p:"Travel medical insurance included and assistance in your language throughout.",s4t:"Medical protocols",s4p:"Emergency plan for every route, partner clinics nearby and private transport available.",
+s1t:"Altitude explained",s1p:"Each journey states its real altitude and, when needed, we plan gradual acclimatization.",s2t:"Accessible hotels",s2p:"Hand-picked boutique hotels, no difficult stairs, comfortable and quiet rooms.",s3t:"International insurance",s3p:"International medical assistance insurance (a requirement to travel) and assistance in your language throughout.",s4t:"Medical protocols",s4p:"Emergency plan for every route, partner clinics nearby and private transport available.",
 famEy:"For children & family",famTitle:"You can relax too",famP:"Every day the family receives a private report via WhatsApp or LINE, with photos and news, plus direct contact with the group host.",chatHead:"Alma Colombia · Daily report",chat1:"Good evening 🌙 Today your mom harvested coffee in Pijao and was first to finish the tasting. She had a lovely dinner and is resting now. Tomorrow: birds at sunrise.",
 comEy:"Community",comTitle:"A community that doesn't end at the airport",comLead:"The bonds formed on the journey deserve to continue. That's why we're with you before, during and after.",
 c1t:"Video call before you fly",c1p:"The group meets in a virtual chat. When you land, friendly faces are already waiting.",c2t:"Real time together in Colombia",c2p:"Shared days, laughter, learning and moments only those who were there understand.",c3t:"Travelers' circle back home",c3p:"Virtual gatherings, news and priority for future departures. The friendship continues.",
 ctEy:"Personal advice",ctTitle:"Secure your place before the group closes",ctP:"Tell us a little about yourself and an advisor will reach you on your preferred channel, with no obligation.",ctUrgent:"<b>2027 seats:</b> only 12 places per departure. The March and April dates are just a few seats from closing; after that, waitlist only.",
 waBtn:"Message us on WhatsApp",lineBtn:"Message us on LINE",fName:"Name",fCountry:"Country",fAge:"Approximate age",fAgeX:"Prefer not to say",fTrip:"Journey of interest",fTripX:"Not sure yet",fChannel:"Preferred channel",chMail:"Email",chVideo:"Video call",fSubmit:"I want to secure my place",fNote:"No payment commitment. Your details are only used to contact you.",
 okT:"Thank you! Your place is on its way",okP:"An Alma Colombia advisor will contact you within 24 hours on your chosen channel. Meanwhile, we've noted your interest in the selected departure.",
-footTxt:"Barichara · Coffee Country · Boyacá<br>Exclusive groups of 12 travelers max",proto:"Pilot prototype — Alma Colombia. Dates, seats and content are illustrative for concept validation. © 2026"
+footTxt:"Barichara · Coffee Country · Boyacá<br>Exclusive groups of 12 travelers max",proto:"Pilot prototype — Alma Colombia. Dates, seats and content are illustrative for concept validation. © 2026",
+careEy:"Personalized care",careTitle:"Your health and well-being, at your pace",careLead:"We design the journey around your pace and your needs. Tell us what matters to you and we'll quietly prepare every detail, so all you have to do is enjoy.",k1t:"Food & allergies",k1p:"Celiac disease, diabetes, low-salt meals, vegetarian or a serious allergy: we brief every hotel and restaurant in advance so your plate arrives safely.",k2t:"Mobility & accessibility",k2p:"Ground-floor or elevator rooms, grab bars, few steps and walks with a gentle alternative. If you use a cane, walker or wheelchair, we plan it with you.",k3t:"Medication & cold chain",k3p:"Your medication travels with you, with your prescription. We arrange a fridge at the hotel and in the vehicle for insulin or anything else that needs it, and we respect your schedule.",k4t:"Altitude & an unhurried pace",k4p:"Every route shows its real altitude. We acclimatize gradually, with active mornings, calm afternoons and real rest.",k5t:"Allied medical network",k5p:"Nearby clinics identified on every route, the local emergency line at hand, and coordination with your insurer's medical assistance, in your language.",k6t:"Travel medical insurance",k6p:"We ask you to travel with international medical assistance insurance that covers your declared pre-existing conditions, evacuation and repatriation. We'll help you review it.",privT:"Your health information belongs to you",privP:"We never ask for medical details on this website. Only after our video call, and if you decide to book, we send you a confidential well-being form. It's voluntary, you fill it in calmly, you give your express consent, and only the people caring for you on the trip will see it. You can ask us to update or delete it at any time.",privS1:"1. Tell us the basics (optional)",privS2:"2. Meet us on a video call",privS3:"3. Confidential form after booking",fCare:"Is there any food, mobility or special care preference we should know about now? (optional)",fCareHint:"No need to share medical details here: those are shared privately, with your consent, once we've talked."
 },
 ja:{
 brandTag:"目的のある旅 60+",navExp:"体験",navPk:"ツアー",navTeam:"サポート",navSafe:"安全",navCom:"コミュニティ",navCta:"相談する",
@@ -594,14 +647,15 @@ quote:"「誰も知らずに参加しました。帰る時には11人の友人�
 teamEy:"サポート",teamTitle:"あなたを見守るチーム",teamLead:"最大12名だからこそ、スタッフ全員があなたをよく知っています。誰かが見守ってくれる安心の中で、自由に旅を。",
 t1t:"ソーシャルホスト",t1p:"初日からグループをつなぎ、誰も取り残されないよう気を配り、毎晩の語らいを導きます。",t2t:"地元の専門家",t2p:"生物学者、天文学者、シェフ、職人が、好きなことを穏やかに分かち合います。",t3t:"健康とウェルネス",t3p:"同行看護師、やさしい理学療法、各地で24時間対応の医師。",t4t:"空港から通訳が同行",t4p:"到着から帰国まで、英語または日本語のバイリンガルスタッフが同行します。",
 safeEy:"安全と安心",safeTitle:"あなたにも、ご家族にも安心を",safeLead:"すべての目的地、ホテル、アクティビティは60〜75歳の方の快適さと安全を考えて選んでいます。",
-s1t:"標高をわかりやすく",s1p:"各旅程に実際の標高を明記し、必要に応じて段階的な順応を計画します。",s2t:"バリアフリーのホテル",s2p:"厳選したブティックホテル。急な階段がなく、快適で静かな客室。",s3t:"海外旅行保険",s3p:"旅行医療保険付き。旅の間ずっと母国語でサポート。",s4t:"医療体制",s4p:"各ルートに緊急時計画、近隣の提携クリニック、専用車を用意。",
+s1t:"標高をわかりやすく",s1p:"各旅程に実際の標高を明記し、必要に応じて段階的な順応を計画します。",s2t:"バリアフリーのホテル",s2p:"厳選したブティックホテル。急な階段がなく、快適で静かな客室。",s3t:"海外旅行保険",s3p:"海外旅行医療保険へのご加入（ご参加の条件）と、旅の間ずっと母国語でのサポート。",s4t:"医療体制",s4p:"各ルートに緊急時計画、近隣の提携クリニック、専用車を用意。",
 famEy:"ご家族の方へ",famTitle:"ご家族も安心して",famP:"毎日、WhatsAppまたはLINEで写真付きのプライベート報告をお届けし、グループのホストと直接連絡が取れます。",chatHead:"アルマ・コロンビア · 毎日のご報告",chat1:"こんばんは🌙 今日お母様はピハオでコーヒーを摘み、テイスティングを一番に終えられました。夕食もしっかり召し上がり、今はお休み中です。明日は朝の野鳥観察です。",
 comEy:"コミュニティ",comTitle:"空港で終わらないコミュニティ",comLead:"旅で生まれた絆は続くべきもの。だから旅の前も、旅の間も、旅の後も寄り添います。",
 c1t:"出発前のビデオ通話",c1p:"オンラインで顔合わせ。到着した時には、もう知っている顔が待っています。",c2t:"コロンビアでの本当のふれあい",c2p:"共に過ごす日々、笑い、学び、そこにいた人だけがわかる瞬間。",c3t:"帰国後の旅仲間の輪",c3p:"オンラインの集い、近況の共有、次回出発の優先案内。友情は続きます。",
 ctEy:"個別相談",ctTitle:"グループが締め切られる前に席の確保を",ctP:"簡単にご記入いただければ、ご希望の方法で担当者からご連絡します。ご契約の義務はありません。",ctUrgent:"<b>2027年の席：</b>各出発12席のみ。3月と4月の日程は残りわずかで、満席後はキャンセル待ちのみとなります。",
 waBtn:"WhatsAppで問い合わせ",lineBtn:"LINEで問い合わせ",fName:"お名前",fCountry:"国",fAge:"年齢（目安）",fAgeX:"回答しない",fTrip:"ご興味のある旅",fTripX:"まだ決めていない",fChannel:"ご希望の連絡方法",chMail:"メール",chVideo:"ビデオ通話",fSubmit:"席を確保したい",fNote:"お支払いの義務はありません。個人情報はご連絡のみに使用します。",
 okT:"ありがとうございます！お席の確保を進めます",okP:"24時間以内に、ご希望の方法でアルマ・コロンビアの担当者からご連絡します。選択された出発へのご関心を承りました。",
-footTxt:"バリチャラ · コーヒー地方 · ボヤカ<br>最大12名の少人数グループ",proto:"パイロット版プロトタイプ — Alma Colombia。日程・席数・内容はコンセプト検証用の例です。© 2026"
+footTxt:"バリチャラ · コーヒー地方 · ボヤカ<br>最大12名の少人数グループ",proto:"パイロット版プロトタイプ — Alma Colombia。日程・席数・内容はコンセプト検証用の例です。© 2026",
+careEy:"一人ひとりに合わせたケア",careTitle:"あなたの健康と心地よさを、あなたのペースで",careLead:"旅はあなたのペースと必要なケアに合わせてつくります。気になることを教えていただければ、細やかに準備いたします。あなたはただ旅を楽しむだけで大丈夫です。",k1t:"食事とアレルギー",k1p:"セリアック病、糖尿病、減塩食、ベジタリアン、重いアレルギーなど。各ホテルとレストランに事前にお伝えし、安心してお食事いただけるようにします。",k2t:"移動のしやすさとバリアフリー",k2p:"1階またはエレベーターのあるお部屋、手すり、段差の少ない環境、歩く行程には楽な代替案も。杖・歩行器・車いすをお使いの方とも一緒に計画します。",k3t:"お薬と温度管理",k3p:"お薬は処方箋とともにご自身でお持ちください。インスリンなど冷蔵が必要なお薬のために、ホテルと車両に冷蔵庫を手配し、服薬の時間も大切にします。",k4t:"標高とゆとりある行程",k4p:"各ルートに実際の標高を表示しています。朝はアクティブに、午後はゆったりと。体を慣らしながら、しっかり休める行程です。",k5t:"提携医療ネットワーク",k5p:"各ルートの近くの医療機関を事前に把握し、現地の緊急連絡先も共有。ご加入の保険の医療アシスタンスとも、ご希望の言語で連携します。",k6t:"海外旅行医療保険",k6p:"申告済みの既往症、緊急移送、本国への搬送をカバーする海外旅行医療保険へのご加入をお願いしています。内容の確認もお手伝いします。",privT:"健康に関する情報は、あなたのものです",privP:"このウェブサイトで医療情報をお聞きすることはありません。ビデオ通話のあと、ご予約を決められた場合にのみ、非公開の「健康とケアのシート」をお送りします。ご記入は任意で、明確な同意をいただいたうえで、旅であなたをお世話する担当者だけが確認します。いつでも修正や削除をお申し付けいただけます。",privS1:"1. 基本的なことを教えてください（任意）",privS2:"2. ビデオ通話でご挨拶",privS3:"3. ご予約後に非公開のシート",fCare:"今の段階で知っておくべき食事・移動・ケアのご希望はありますか？（任意）",fCareHint:"ここで医療の詳細を書く必要はありません。詳しい内容は、お話ししたあと、同意をいただいたうえで個別に共有していただきます。"
 }};
 const TRIPS = [
  {img:"img/barichara.jpg",
